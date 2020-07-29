@@ -2,7 +2,7 @@
  * Projects
  */
 oss_projects = {};
-oss_projects['app_service'] = {
+oss_projects['koma-console'] = {
   blog_post: 'https://yypurdi.blogspot.com',
   featured: true,
   position: 1,
