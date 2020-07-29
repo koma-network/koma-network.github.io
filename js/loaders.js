@@ -20,6 +20,9 @@ oss_projects['koma-msb'] = {
 oss_projects['koma-fcm'] = {
   background: 'koma-fcm.jpg'
 };
+oss_projects['koma-xmpp-client'] = {
+  background: 'koma-fcm.jpg'
+};
 
 /*
  * Organization
