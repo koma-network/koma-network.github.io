@@ -6,21 +6,15 @@ oss_projects['koma-console'] = {
   blog_post: 'https://yypurdi.blogspot.com',
   featured: true,
   position: 1,
-  background: 'msb.jpg'
+  background: 'koma-component.jpg'
 };
-oss_projects['app_service_client'] = {
+oss_projects['koma-xmpp-server'] = {
   blog_post: 'https://yypurdi.blogspot.com/',
   featured: true,
   position: 2,
-  background: 'msb.jpg'
+  background: 'koma-interface.jpg'
 };
-oss_projects['koma-fcm'] = {
-  blog_post: 'https://yypurdi.blogspot.com/',
-  featured: true,
-  position: 3,
-  background: 'koma-fcm.jpg'
-};
- 
+
 /*
  * Organization
  */
