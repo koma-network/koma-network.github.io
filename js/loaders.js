@@ -271,7 +271,7 @@ function getAllPages(urlPrefix, callback, page, results) {
 }
 
 function getGithubRepos(callback, page, repos) {
-  getAllPages('https://api.github.com/users/yypurdi/repos', callback);
+  getAllPages('https://api.github.com/users/koma-network/repos', callback);
 }
 
 function loadRepositoryData(repoData) {
