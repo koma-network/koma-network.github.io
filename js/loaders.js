@@ -275,7 +275,7 @@ function getGithubRepos(callback, page, repos) {
 }
 
 function loadRepositoryData(repoData) {
-  var org = new Organization('yypurdi');
+  var org = new Organization('koma-network');
   org.repos = [];
 
   repoData.forEach(function(repoDatum) {
