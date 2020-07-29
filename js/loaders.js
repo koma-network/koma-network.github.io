@@ -14,6 +14,12 @@ oss_projects['koma-xmpp-server'] = {
   position: 2,
   background: 'koma-interface.jpg'
 };
+oss_projects['koma-msb'] = {
+  background: 'koma-msb.jpg'
+};
+oss_projects['koma-fcm'] = {
+  background: 'koma-fcm.jpg'
+};
 
 /*
  * Organization
