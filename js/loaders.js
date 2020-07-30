@@ -23,7 +23,7 @@ oss_projects['koma-fcm'] = {
 oss_projects['koma-xmpp-client'] = {
   background: 'koma-fcm.jpg'
 };
-
+ 
 /*
  * Organization
  */
@@ -200,8 +200,8 @@ Repository.prototype.getContainer = function(index) {
     '    <a href="', this.url, '">',
     '          <img src="images/opensource/',this.background(),'" alt="Community" class="img-responsive center-block" style="height:100px"/>',
     '            <div class="caption">',
-    '                  <p>',this.name,'</p>',
-	'                  <p>',this.language,'</p>',
+    '                  <p style="color:#000">',this.name,'</p>',
+	'                  <p style="color:#000">',this.language,'</p>',
     '            </div>',
     '    </a>',
     '    </div>',
