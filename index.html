@@ -141,19 +141,23 @@ a, a:visited, a:hover {
 	font-size: 14px;
 	line-height: 20px;
 }
+h1, h2, h3 {
+	color:#e8e8e8;
+}
 h4, h5, h6, p, strong, div, form, acronym, label, span, a, hr, code, pre, hr {
 	margin: 0;
 	padding: 0;
-	font-size: 12px;
+	color: #f0e7d5;
+	font-size: 12px;	
 	background-repeat: no-repeat;
-	list-style-type: none;
 }
 .panel-group {
 	margin-top: 5px;
 }							
 .container {
     height: 100vh;
-    overflow: auto;
+    overflow: initial;
+	font-family:auto;	
 }
 .top-left {
 	position: absolute;
@@ -161,20 +165,31 @@ h4, h5, h6, p, strong, div, form, acronym, label, span, a, hr, code, pre, hr {
 	left: 12.5%;
 	color: white;
 }
-.container {
-	overflow: inherit;
+#generator p a {
+    border: 1px solid #5d910b;
+    background: linear_gradient(#93bd20, #659e10);
+    border-radius: 2px;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255,0.3),0px 3px 7px rgba(0,0,0,0.7);
+    background-color: #93bd20;
+    line-height: 14px;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+}
+.row a p {
+	color: #000;
 }
 </style>
 
 </head>
-<body style="background:#b9caea url('images/bg-home-body.png') no-repeat top left;background-size:cover;">
+<body style="background:#252525 no-repeat top left;background-size:cover;">
 
   <!--==========================
     NavBar
   ============================-->
 
  <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid" style="background:#060409">
+  <div class="container-fluid" style="background:#353535">
 	<div class="navbar-header">
 	  <a class="navbar-brand" href="#">KOMA-Network</a>
 	</div>
@@ -199,25 +214,81 @@ h4, h5, h6, p, strong, div, form, acronym, label, span, a, hr, code, pre, hr {
   <!--==========================
     Home Section
   ============================-->
-  <section id="welcome" class="wow fadeIn">
-      <div class="item active">
-		<img src="images/bg-home.jpg" alt="home" class="img-responsive center-block" style="padding-top: 10px" />
-		<div class="top-left">        
-			<h1 style="font-size:3.5vw;">
-				A New Way<br>
-				To Start Your Startups
-			</h1>
-			<p style="font-size: 1.1vw;">
-				KOMA has a new way to support your Startups or your current Business as Communities
-				<br>We have Micro Service, Micro Application, Micro Service Bus (Middleware) and Micro Application Generator
-				<br>KOMA Component is something difference from ESB but it has same functions as midleware for your Public Smart Grid Architecture
-			</p>
-			<div style="padding-top: 1vw;">
-				<a class="btn btn-primary btn-responsive" href="#about" role="button" style="font-size: 1vw;background:#00ffff">Let's Join</a>
-			</div>
-		</div>		
-      </div>
-  </section>
+  <section id="welcome" class="padd-section text-center wow fadeInUp">
+  <div class="container">
+  <h1 style="padding-top:5vw">Home</h1>
+  <div>        
+	<h1 style="font-size:1.65vw;">
+		KOMA Network & Communities
+	</h1>
+	<p style="font-size: 1.1vw;">
+		KOMA has a new way to support your Startups or your current Business as Communities
+		<br>We have Micro Service, Micro Application, Micro Service Bus (Middleware) and Micro Application Generator
+		<br>KOMA Component is something difference from ESB but it has same functions as midleware for your Public Smart Grid Architecture
+	</p>
+  </div>  
+  <div class="row" style="padding-top:1.5vw">
+    <div class="col-sm-3 text-center">
+        <div class="thumbnail">
+        <a href="images/myprofile.png">
+		  <img src="images/myprofile.png" alt="Product1" class="img-responsive center-block"/>
+        </a>
+        </div>      
+    </div>
+    <div class="col-sm-3 text-center">
+        <div class="thumbnail">
+        <a href="images/msb-decentralize.jpg">
+		  <img src="images/msb-decentralize.jpg" alt="Product2" class="img-responsive center-block"/>
+        </a>
+        </div>      
+    </div>
+    <div class="col-sm-3 text-center">
+        <div class="thumbnail">
+        <a href="images/mobile-messanger.jpg">
+		  <img src="images/mobile-messanger.jpg" alt="Product3" class="img-responsive center-block"/>
+        </a>
+        </div>      
+    </div>
+    <div class="col-sm-3 text-center">
+        <div class="thumbnail">
+        <a href="images/iiot-club.jpg">
+		  <img src="images/iiot-club.jpg" alt="Community" class="img-responsive center-block"/>
+        </a>
+        </div>      
+    </div>	
+  </div>
+  <div class="row" style="padding-top:1.5vw">
+    <div class="col-sm-3 text-center">
+        <div class="thumbnail">
+        <a href="images/mobile-iot.jpg">
+		  <img src="images/mobile-iot.jpg" alt="Product1" class="img-responsive center-block"/>
+        </a>
+        </div>      
+    </div>
+    <div class="col-sm-3 text-center">
+        <div class="thumbnail">
+        <a href="images/mobile-ptt.jpg">
+		  <img src="images/mobile-ptt.jpg" alt="Product2" class="img-responsive center-block"/>
+        </a>
+        </div>      
+    </div>
+    <div class="col-sm-3 text-center">
+        <div class="thumbnail">
+        <a href="images/mobile-web.jpg">
+		  <img src="images/mobile-web.jpg" alt="Product3" class="img-responsive center-block"/>
+        </a>
+        </div>      
+    </div>
+    <div class="col-sm-3 text-center">
+        <div class="thumbnail">
+        <a href="images/koma-fcm.jpg">
+		  <img src="images/koma-fcm.jpg" alt="Community" class="img-responsive center-block"/>
+        </a>
+        </div>      
+    </div>	
+  </div>  
+  </div>  
+  </section>         
 
   <!--==========================
     Product Community Section
@@ -362,27 +433,27 @@ h4, h5, h6, p, strong, div, form, acronym, label, span, a, hr, code, pre, hr {
         </div>      
     </div> 
     <div class="col-sm-3 text-center">
-        <h3>PTT-IoT</h3>
+        <h3>PTT-Device</h3>
         <div class="thumbnail">
         <a href="https://youtu.be/Dm6HB_Enox0">
+              <img src="images/mobile-wemos.png" alt="Product1" class="img-responsive center-block"/>
+                <div class="caption">
+                      <p>ESP8266 Alert to PTT</p>
+                </div>
+        </a>
+        </div>      
+    </div>	
+    <div class="col-sm-3 text-center">
+        <h3>PTT-IoT</h3>
+        <div class="thumbnail">
+        <a href="https://youtu.be/v5G9OF0uWdc">
               <img src="images/mobile-iot.jpg" alt="Product1" class="img-responsive center-block"/>
                 <div class="caption">
                       <p>PTT - Internet of Things Integration</p>
                 </div>
         </a>
         </div>      
-    </div>
-    <div class="col-sm-3 text-center">
-        <h3>Mobile-Messanger</h3>
-        <div class="thumbnail">
-        <a href="images/mobile-messanger.jpg">
-              <img src="images/mobile-messanger.jpg" alt="Product1" class="img-responsive center-block"/>
-                <div class="caption">
-                      <p>VoIP Messanger & Tracking</p>
-                </div>
-        </a>
-        </div>      
-    </div>	
+    </div>  
     <div class="col-sm-3 text-center">
         <h3>Mobile-ViCon</h3>
         <div class="thumbnail">
@@ -406,14 +477,14 @@ h4, h5, h6, p, strong, div, form, acronym, label, span, a, hr, code, pre, hr {
   <h1 style="padding-top:4vw">KOMA Generator</h1>
   <p style="font-size: 1vw;">KOMA Generator is micro application generator, it can generate your application very fast as required in software development</p>
   <p style="font-size: 1.3vw;padding-top:1vw">Instructions to
-	<a class="btn btn-primary btn-responsive" href="" role="button" style="font-size: 1vw;background:green">Generate Your Application</a>
+	<a class="btn btn-primary btn-responsive" href="" role="button" style="color:#fff;font-size: 1vw;border: 1px solid #5d910b;background-color:#93bd20">Generate Your Application</a>
   </p>
   <p style="font-size: 1vw;">1. Install NetBeans IDE 8.2 and install Gradle Support plugin for NetBeans IDE</p>
   <p style="font-size: 1vw;">2. Generate your application, you can add additional tables relations</p>
   <p style="font-size: 1vw;">3. Download and extract your generated application and open with NetBeans IDE</p>
   <p style="font-size: 1vw;">4. Create Database from import.sql file</p>
   <p style="font-size: 1vw;">5. Run and Test</p>
-  <p style="font-size: 1vw;"><a href="https://www.youtube.com/watch?v=ZZ4r4Km58rE" style="font-size: 1vw;">6. Video Instruction</a></p>    
+  <a href="https://www.youtube.com/watch?v=ZZ4r4Km58rE" style="font-size: 1vw;color:#ffcc00;">6. Video Instruction</a>
   </div>  
   <div class="row" style="padding-top:1.5vw">
     <div class="col-sm-2 text-center">
@@ -555,7 +626,7 @@ h4, h5, h6, p, strong, div, form, acronym, label, span, a, hr, code, pre, hr {
   <br>It is hoped that in the future this group can create another communities
   <br>according to the selected segmentation for each its implementation
   </p>
-  <a href="https://www.facebook.com/groups/IndonesiaIoTClub/about"><p style="font-size: 1.2vw;padding-top:1vw">go to Facebook Group Link</p></a>
+  <a href="https://www.facebook.com/groups/IndonesiaIoTClub/about"><p style="font-size: 1.2vw;padding-top:1vw;color:#ffcc00;">go to Facebook Group Link</p></a>
   </div>  
   <div class="row" style="padding-top:4vw">
     <div class="col-sm-3 text-center">
@@ -615,15 +686,15 @@ h4, h5, h6, p, strong, div, form, acronym, label, span, a, hr, code, pre, hr {
   <p style="font-size: 1vw;">KOMA was release several component as Open Source</p>
   <p style="font-size: 1vw;">The Source Code was managed in GiHub Repositories</p>
   </div>
-  <div class="border border-2">
+  <div>
 	  <div class="projects y-container_content clearfix">
-	  <h3>Project</h3><br>
+	  <h3>Component</h3><br>
 	  <div class="featured"></div>
 	  </div>
   </div>
   <div>
       <div class="projects y-container_content clearfix">
-	  <h3>Component</h3><br>
+	  <h3>Project</h3><br>
 	  <div class="not-featured"></div>
   </div>
   
