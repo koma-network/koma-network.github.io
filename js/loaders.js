@@ -3,15 +3,13 @@
  */
 oss_projects = {};
 oss_projects['koma-console'] = {
-  blog_post: 'https://koma-network.github.io/koma-console',
-  featured: true,
   position: 1,
+  featured: true,  
   background: 'koma-component.jpg'
 };
 oss_projects['koma-xmpp-server'] = {
-  blog_post: 'https://koma-network.github.io/koma-msb',
-  featured: true,
   position: 2,
+  featured: true,
   background: 'koma-interface.jpg'
 };
 oss_projects['koma-msb'] = {
@@ -139,12 +137,7 @@ Repository = function(repo) {
   this.fork        = repo.fork;
   this.watchers    = repo.watchers;
   this.forks       = repo.forks;
-}
-
-Repository.prototype.blogPost = function() {
-  if (oss_projects[this.name] && oss_projects[this.name].blog_post) {
-    return oss_projects[this.name].blog_post;
-  }
+  this.homepage    = repo.homepage;
 }
 
 Repository.prototype.featured = function() {
@@ -184,21 +177,22 @@ Repository.prototype.classes = function() {
   }
 }
 
-Repository.prototype.getBlogLink = function() {
-  if (this.blogPost()) {
-    return '<a href="'+ this.blogPost() +'" target="_blank"><span class="octicon octicon-file-text"></span> Blog post</a> ';
+Repository.prototype.getHomePage = function() {
+  if (this.homepage) {
+    return this.homepage;
+  }else{
+	return 'https://koma-network.github.io';
   }
 }
 
 Repository.prototype.getContainer = function(index) {
   var last = '';
   if (index % 4 == 0) { last = 'last-in-row' }
-  var url = this.url;
-  if (this.blogPost()) { url = this.blogPost() }
+  
   return [
     '<div class="col-sm-2 text-center">',
     '    <div class="thumbnail">',
-    '    <a href="', url, '">',
+    '    <a href="', this.getHomePage(), '">',
     '          <img src="images/opensource/',this.background(),'" alt="Community" class="img-responsive center-block" style="height:100px"/>',
     '            <div class="caption">',
     '                  <p style="color:#000">',this.name,'</p>',
@@ -240,16 +234,6 @@ Repository.prototype.repoContent = function() {
       '<p>', this.description, '</p>',
     '</div>'
   ].join('');
-}
-
-Repository.prototype.bottomLinks = function() {
-  if (this.blogPost()) {
-    return [
-      '<div class="island-item bottom-links">',
-        this.getBlogLink(),
-      '</div>'
-    ].join('');
-  }
 }
 
 /*
