@@ -136,7 +136,7 @@ Repository = function(repo) {
   this.description = repo.description;
   this.fork        = repo.fork;
   this.watchers    = repo.watchers;
-  this.forks       = repo.forks;
+  this.forks       = repo.forks;  
   this.homepage    = repo.homepage;
 }
 
@@ -179,9 +179,13 @@ Repository.prototype.classes = function() {
 
 Repository.prototype.getHomePage = function() {
   if (this.homepage) {
-    return this.homepage;
+	if(this.homepage=='https://koma-network.github.io'){
+		return this.url;
+	}else{
+		return this.homepage;
+	}
   }else{
-	return 'https://koma-network.github.io';
+	return this.url;
   }
 }
 
