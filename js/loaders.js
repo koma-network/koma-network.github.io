@@ -3,13 +3,13 @@
  */
 oss_projects = {};
 oss_projects['koma-console'] = {
-  blog_post: 'https://yypurdi.blogspot.com',
+  blog_post: 'https://koma-network.github.io/koma-console',
   featured: true,
   position: 1,
   background: 'koma-component.jpg'
 };
 oss_projects['koma-xmpp-server'] = {
-  blog_post: 'https://yypurdi.blogspot.com/',
+  blog_post: 'https://koma-network.github.io/koma-msb',
   featured: true,
   position: 2,
   background: 'koma-interface.jpg'
@@ -193,11 +193,12 @@ Repository.prototype.getBlogLink = function() {
 Repository.prototype.getContainer = function(index) {
   var last = '';
   if (index % 4 == 0) { last = 'last-in-row' }
-
+  var url = this.url;
+  if (this.blogPost()) { url = this.blogPost() }
   return [
     '<div class="col-sm-2 text-center">',
     '    <div class="thumbnail">',
-    '    <a href="', this.url, '">',
+    '    <a href="', url, '">',
     '          <img src="images/opensource/',this.background(),'" alt="Community" class="img-responsive center-block" style="height:100px"/>',
     '            <div class="caption">',
     '                  <p style="color:#000">',this.name,'</p>',
