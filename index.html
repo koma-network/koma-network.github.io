@@ -180,7 +180,53 @@ h4, h5, h6, p, strong, div, form, acronym, label, span, a, hr, code, pre, hr {
 	color: #000;
 }
 </style>
+<script>
+    var windowW = 300
+    var windowH = 575
+    var windowX = 750
+    var windowY = 165
+    var title = "KOMA Network"
+    var options = 'height=500,width=275,left=750,top=165,resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,directories=no,titlebar=no,status=no';
 
+    var autoclose = true
+
+    var s = "width=" + windowW + ",height=" + windowH;
+    var option = "fullscreen=yes," + s;
+
+    var NFW;
+    function openChat(urlPop) {
+      NFW = window.open("", "popFrameless", option);
+      NFW.blur();
+      window.focus();
+      NFW.resizeTo(windowW, windowH);
+      NFW.moveTo(windowX, windowY);
+      var frameString = "" +
+        "<html>" +
+        "<head>" +
+        "<title>" + title + "</title>" +
+        "<link rel='icon' type='image/jpg' href='images/logo.jpg' />" +
+        "</head>" +
+        "<frameset rows='*,0' framespacing='0' border='0' frameborder='0'>" +
+        "<frame name='top' src='" + urlPop + "' scrolling='auto'></frame>" +
+        "<frame name='bottom' src='about:blank' scrolling='no'></frame>" +
+        "</frameset>" +
+        "</html>";
+      NFW.document.open();
+      NFW.document.write(frameString);
+      NFW.document.close();
+    }
+    NFW.focus();
+    if (autoclose) {
+      window.onunload = function () { NFW.close(); }
+    }
+
+    function openMobile(url) {
+      popupWindow = window.open(url, 'KOMA', options);
+      popupWindow.blur();
+      window.focus();
+    }
+
+</script>
 </head>
 <body style="background:#252525 no-repeat top left;background-size:cover;">
 
@@ -216,12 +262,15 @@ h4, h5, h6, p, strong, div, form, acronym, label, span, a, hr, code, pre, hr {
   ============================-->
   <section id="welcome" class="padd-section text-center wow fadeInUp">
   <div class="container">
-  <h1 style="padding-top:5vw">Home</h1>
+  <h1 style="padding-top:4vw">Home</h1>
   <div>        
-	<h1 style="font-size:1.65vw;">
+	<h1 style="font-size:1.5vw;">
 		KOMA Network & Communities
 	</h1>
-	<p style="font-size: 1.1vw;">
+	<p style="font-size: 1.3vw">
+		<a class="btn btn-primary btn-responsive" href="" role="button" onclick="openChat('http://koma-network.net:3000/mobile')" style="color:#fff;font-size: 1vw;border: 1px solid #5d910b;background-color:#93bd20">Open to Chat</a>
+	</p>	
+	<p style="font-size: 1vw;">
 		KOMA has a new way to support your Startups or your current Business as Communities
 		<br>We have Micro Service, Micro Application, Micro Service Bus (Middleware) and Micro Application Generator
 		<br>KOMA Component is something difference from ESB but it has same functions as midleware for your Public Smart Grid Architecture
@@ -696,16 +745,17 @@ h4, h5, h6, p, strong, div, form, acronym, label, span, a, hr, code, pre, hr {
       <div class="projects y-container_content clearfix">
 	  <h3>Component</h3>
 	  <div class="not-featured"></div>
+	  </div>
   </div>
-  
-  <div class="text-center">
+  <div class="text-center">  
   <h1 style="padding-top:5vw">Contact Us</h1>
   <p style="font-size: 1vw;">Please contact us for more information with below email</p>
   <p style="font-size: 1vw;padding-top:2vw">yypurdi@gmail.com</p>
   <br>
   <br>
   <br>
-  </div>    
+  </div>
+  </div>
   </section>
   
 </body>
